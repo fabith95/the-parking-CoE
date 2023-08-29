@@ -12,8 +12,8 @@ class Parqueadero {
         }
     }
 
-    public void buscarCarro(Carro carro, String registro) {
-        if (registro.equals("placa")) {
+    public void buscarCarro(Carro carro, String placa) {
+        if (placa.equals(carro.getPlaca())) {
             PlazaEstacionamiento plaza = buscarPlazaPorPlaca(carro.getPlaca());
             if (plaza != null) {
                 plaza.asignarCarro(carro);

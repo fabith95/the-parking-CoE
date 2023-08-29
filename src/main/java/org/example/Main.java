@@ -8,8 +8,10 @@ public class Main {
         Carro carro1 = new Carro("VJY67A", 1800);
 
         System.out.println(carro.toString());
-        parqueadero.buscarCarro(carro, "cddd");
+        parqueadero.buscarCarro(carro, "EJE59A");
+        System.out.println();
         System.out.println(carro1.toString());
-        parqueadero.buscarCarro(carro1, "placa");
+        parqueadero.buscarCarro(carro1, "NOT30A");
+
     }
 }
