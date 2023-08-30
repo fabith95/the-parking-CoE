@@ -20,12 +20,12 @@ public class Main {
 
         System.out.println("Aqui busqueda por Peso Kg: ");
         System.out.println(carro3.getPeso());
-        parqueadero.buscarCarroXPeso(carro3, 100);
-        System.out.println();
+        String answer = parqueadero.buscarCarroXPeso(carro3, 100);
+        System.out.println(answer + "\n");
 
         System.out.println("Aqui busqueda por Placa: ");
         System.out.println(carro2.getPlaca());
-        parqueadero.buscarCarroXPlaca(carro2, "VJY67A");
-
+        String ans = parqueadero.buscarCarroXPlaca(carro2, "VJY67A");
+        System.out.println(ans + "\n");
     }
 }

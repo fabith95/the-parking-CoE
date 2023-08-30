@@ -12,29 +12,31 @@ class Parqueadero implements buscar {
         }
     }
 
-    public void buscarCarroXPlaca(Carro carro, String placa) {
-
+    public String buscarCarroXPlaca(Carro carro, String placa) {
+        String pla = "";
         if (placa.equals(carro.getPlaca())) {
             PlazaEstacionamiento plaza = buscarPlazaPorPlaca(placa);
             if (plaza != null) {
                 plaza.asignarCarro(carro);
-                System.out.println("Carro registrado en la plaza: " + plaza.getNumeroPlaza());
+                pla = ("Carro registrado en la plaza: " + plaza.getNumeroPlaza());
             } else {
-                System.out.println("No se encontró plaza disponible para el carro con placa " + carro.getPlaca());
+                pla = ("No se encontró plaza disponible para el carro con placa " + carro.getPlaca());
             }
         } else {
-            System.out.println("Registro de carro no encontrado!");
+            pla = ("Registro de carro no encontrado!");
         }
+        return pla;
     }
 
-    public void buscarCarroXPeso(Carro carro, double peso) {
+    public String buscarCarroXPeso(Carro carro, double peso) {
         PlazaEstacionamiento plaza = buscarPlazaPorPesoCarro(peso);
-
+        String pes = "";
         if (peso == carro.getPeso()) {
-            System.out.println("Carro registrado con peso " + peso + " en la plaza: " + plaza.getNumeroPlaza());
+            pes = "Carro registrado con peso " + peso + " en la plaza: " + plaza.getNumeroPlaza();
         } else {
-            System.out.println("No se encontró plaza disponible para el carro con peso " + carro.getPeso());
+            pes = "No se encontró plaza disponible para el carro con peso " + carro.getPeso();
         }
+        return pes;
     }
 
     public PlazaEstacionamiento buscarPlazaPorPlaca(String placa) {
