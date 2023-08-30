@@ -12,7 +12,7 @@ class Parqueadero implements buscar {
         }
     }
 
-    public String buscarCarroXPlaca(Carro carro, String placa) {
+    public String registrarCarroXPlaca(Carro carro, String placa) {
         String pla = "";
         if (placa.equals(carro.getPlaca())) {
             PlazaEstacionamiento plaza = buscarPlazaPorPlaca(placa);

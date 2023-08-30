@@ -26,7 +26,7 @@ public class ParqueaderoTest {
         Carro carro = new Carro("EJE59E", 80);
 
         Assertions.assertEquals("Carro registrado en la plaza: 1",
-                parqueadero.buscarCarroXPlaca(carro, "EJE59E"));
+                parqueadero.registrarCarroXPlaca(carro, "EJE59E"));
     }
 
     @Test

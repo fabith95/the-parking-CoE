@@ -8,24 +8,26 @@ public class Main {
         Carro carro2 = new Carro("VJY67A", 1800);
         Carro carro3 = new Carro("SSSS", 100);
 
-        parqueadero.buscarCarroXPlaca(carro1, "EJE59A");
-        System.out.println();
+        String respuesta1 = parqueadero.registrarCarroXPlaca(carro1, "EJE59A");
+        System.out.println(respuesta1 + "\n");
 
-        parqueadero.buscarCarroXPlaca(carro2, "VJY67A");
-        System.out.println();
+        String respuesta2 = parqueadero.registrarCarroXPlaca(carro2, "VJY67A");
+        System.out.println(respuesta2 + "\n");
 
-        System.out.println(carro3.toString());
-        parqueadero.buscarCarroXPlaca(carro3, "SSSS");
-        System.out.println();
+        String respuesta3 = parqueadero.registrarCarroXPlaca(carro3, "SSSS");
+        System.out.println(respuesta3 + "\n");
 
         System.out.println("Aqui busqueda por Peso Kg: ");
         System.out.println(carro3.getPeso());
         String answer = parqueadero.buscarCarroXPeso(carro3, 100);
-        System.out.println(answer + "\n");
+        System.out.println(answer);
+        System.out.println(carro3.toString() + "\n");
 
         System.out.println("Aqui busqueda por Placa: ");
         System.out.println(carro2.getPlaca());
-        String ans = parqueadero.buscarCarroXPlaca(carro2, "VJY67A");
-        System.out.println(ans + "\n");
+        String ans = parqueadero.registrarCarroXPlaca(carro2, "VJY67A");
+        System.out.println(ans);
+        System.out.println(carro2.toString() + "\n");
+
     }
 }
