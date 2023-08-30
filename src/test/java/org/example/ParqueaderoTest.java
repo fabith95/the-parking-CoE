@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class ParqueaderoTest {
     @Test
     void crearParqueadero() {
-        Parqueadero parqueadero = new Parqueadero(10);
+        Parqueadero parqueadero = new Parqueadero(5);
         Assertions.assertNotNull(parqueadero);
     }
 
@@ -17,4 +17,6 @@ public class ParqueaderoTest {
         Assertions.assertEquals("EJE59E", carro.getPlaca());
         Assertions.assertEquals(80, carro.getPeso());
     }
+
+    
 }
